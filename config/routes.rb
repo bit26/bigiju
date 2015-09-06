@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root 'messages#index'
+  root 'tweets#index'
+
+  get 'messages/index'
   resources :messages , only: [:create]
 
   # The priority is based upon order of creation: first created -> highest priority.
