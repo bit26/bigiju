@@ -1,9 +1,16 @@
-<h1>あなたのツイート一覧</h1>
-<% @tweets.each do |tweet| %>
-  名前:<%= tweet.username %>
-  内容:<%= tweet.tweet %>
-  <br>
-<% end %>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    メッセージ一覧
+  </div>
+    
+  <div class="panel-body">
+    <% @tweets.each do |tweet| %>
+      <span class="label label-info"><%= tweet.username %></span>
+      <%= tweet.tweet %>
+      <br>
+    <% end %>
+  </div>
+</div>
 
 <%= form_for(Tweet.new) do |f| %>
     内容:
